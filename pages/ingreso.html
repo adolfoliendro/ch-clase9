@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ingreso</title>
+  </head>
+  <body class="flex-column">
+    <header class="flex-row flex-j-spaceB estiloA textoBlanco">
+      <!-- Logo -->
+      <div class="logo estiloB"><a href="../index.html">EASYPROP</a></div>
+      <!--Menú-->
+      <nav>
+        <ul class="menu flex-row estiloBinside">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./buscar.html">Buscar</a></li>
+          <li><a href="./informacion.html">Información</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Ingreso -->
+      <div class="ingreso estiloB">
+        <a href="./ingreso.html">Ingreso / Registro</a>
+      </div>
+    </header>
+
+    <main class="flex-row flex-j-spaceB textoBlanco">
+      <aside></aside>
+      <!-- Formulario de ingreso / registro -->
+      <section class="cajaCentral flex-column estiloA">
+        <div class="cajaForm estiloC">
+          <p>Ingrese al sitio:</p>
+          <form action="" class="form">
+            <div>
+              <label for="usuario">Usuario:</label>
+              <input type="text" name="usuario" id="usuario" />
+            </div>
+            <div>
+              <label for="contraseña">Contraseña:</label>
+              <input type="password" />
+            </div>
+            <div>
+              <input type="submit" value="Ingresar" />
+            </div>
+          </form>
+        </div>
+        <div class="cajaForm estiloC">
+          <p>O si no está registrado, puede hacerlo aquí:</p>
+          <form action="" class="form">
+            <div>
+              <label for="usuario">Usuario:</label>
+              <input type="text" name="usuario" id="usuario" />
+            </div>
+            <div>
+              <label for="contraseña">Contraseña:</label>
+              <input type="password" />
+            </div>
+            <div>
+              <label for="repetir-contraseña">Repetir contraseña:</label>
+              <input type="password" />
+            </div>
+            <div>
+              <input type="submit" value="Registrarse" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>© 2021 Liendro, Adolfo Benjamin</footer>
+  </body>
+</html>

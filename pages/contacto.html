@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contacto</title>
+  </head>
+  <body class="flex-column">
+    <header class="flex-row flex-j-spaceB estiloA textoBlanco">
+      <!-- Logo -->
+      <div class="logo estiloB"><a href="../index.html">EASYPROP</a></div>
+      <!--Menú-->
+      <nav>
+        <ul class="menu flex-row estiloBinside">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./buscar.html">Buscar</a></li>
+          <li><a href="./informacion.html">Información</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Ingreso -->
+      <div class="ingreso estiloB">
+        <a href="./ingreso.html">Ingreso / Registro</a>
+      </div>
+    </header>
+
+    <main class="flex-row flex-j-spaceB textoBlanco">
+      <aside></aside>
+      <!-- Formulario de contacto -->
+      <section class="cajaCentral flex-column estiloA">
+        <div class="cajaForm estiloC">
+          <form action="" class="form">
+            <div>
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" />
+            </div>
+            <div>
+              <label for="apellido">Apellido:</label>
+              <input type="text" name="apellido" id="apellido" />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="nombre@ejemplo.com"
+              />
+            </div>
+            <div>
+              <select name="tipo_de_usuario" id="tipo_de_usuario">
+                <option value="inquilino">Inquilino</option>
+                <option value="propietario">Propietario</option>
+                <option value="inmobiliaria">Inmobiliaria</option>
+              </select>
+            </div>
+            <div>
+              ¿Desea recibir Newsletter?
+              <input type="checkbox" />
+            </div>
+            <div>
+              <textarea
+                name="comentarios"
+                id="comentarios"
+                cols="30"
+                rows="10"
+                placeholder="Comentarios"
+              ></textarea>
+              <br />
+              <input type="reset" value="Limpiar formulario" />
+              <input type="submit" value="Enviar formulario" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2021 Liendro, Adolfo Benjamin</footer>
+  </body>
+</html>

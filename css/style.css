@@ -1,0 +1,344 @@
+/*------------ Reset CSS -------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ol {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*----------- TEXTOS --------------*/
+
+* {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Ubuntu, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+.textoBlanco * {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.form input,
+.form select,
+.form select option {
+  color: black;
+  line-height: 3rem;
+}
+
+.form input,
+.form textarea {
+  text-align: left;
+}
+
+/*----- ESTILOS DE CAJAS: COLORES Y BORDES -------*/
+
+.estiloA {
+  background-color: #b3ccff;
+  border: 2px solid gray;
+}
+
+.estiloB,
+.estiloBinside > * {
+  background-color: #69f;
+  border: 2px solid black;
+}
+
+.estiloC,
+.estiloCinside > * {
+  background-color: #596680;
+  border: 2px solid black;
+}
+
+.estiloD,
+.estiloDinside > * {
+  background-color: #527acc;
+  border: 2px solid black;
+}
+
+/*------------ HEADER & FOOTER con FLEX -------------*/
+
+.flex-row,
+.flex-column {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-j-center {
+  justify-content: center;
+}
+
+.flex-j-spaceB {
+  justify-content: space-between;
+}
+
+header,
+main,
+footer {
+  padding: 3rem;
+  justify-content: center;
+}
+
+header,
+menu {
+  flex-wrap: wrap;
+}
+
+footer {
+  background-image: linear-gradient(to top, #b3ccff, white);
+}
+
+aside {
+  width: 14rem;
+  padding: 2rem 1rem 0rem 1rem;
+  align-self: flex-start;
+}
+
+aside > div {
+  width: 14rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 14rem;
+  padding-right: 2rem;
+  text-align: right;
+  background-image: url("../imgs/logo.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+nav ul li {
+  width: 12rem;
+}
+
+.ingreso {
+  width: 16rem;
+}
+
+/*----- ANIMACION HEADER ------*/
+
+@keyframes respiracion {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.logo:hover,
+nav ul li:hover,
+.ingreso:hover {
+  animation-name: respiracion;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-duration: 2.5s;
+}
+
+/*------ TRANSFORMACION ASIDE -----*/
+
+aside > div {
+  transition: all 2s;
+}
+
+aside > div:hover {
+  padding-left: 3rem;
+  background-color: #69f;
+}
+
+/*------- MAIN con FLEX ---------*/
+
+.cajaCentral {
+  width: 43rem;
+  height: auto;
+  padding: 3rem 3rem 0rem 3rem;
+  margin-right: 32rem;
+  align-content: stretch;
+}
+
+.cajaCentral > div {
+  width: auto;
+  margin-bottom: 3rem;
+}
+
+.cajaForm {
+  width: auto;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.form > * {
+  text-align: right;
+  padding-right: 8rem;
+}
+
+/*--------- PUBLICACIONES con GRID ---------*/
+
+/* GRID PRINCIPAL */
+
+#publicaciones {
+  display: grid;
+  grid-template-areas:
+    "pubProm  pubProm pub1  pub2  banner"
+    "pub3     pub4    pub5  pub6  banner";
+  grid-template-rows: repeat(2, 16rem);
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: stretch;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  width: 77rem;
+  padding: 2rem;
+}
+
+#pubProm {
+  grid-area: pubProm;
+}
+
+#pub1 {
+  grid-area: pub1;
+}
+
+#pub2 {
+  grid-area: pub2;
+}
+
+#pub3 {
+  grid-area: pub3;
+}
+
+#pub4 {
+  grid-area: pub4;
+}
+
+#pub5 {
+  grid-area: pub5;
+}
+
+#pub6 {
+  grid-area: pub6;
+}
+
+#banner {
+  grid-area: banner;
+  background-image: url(../imgs/banner.jpg);
+}
+
+/* ANIMACION BANNER */
+
+@keyframes banner {
+  0% {
+    background-image: url(../imgs/banner.jpg);
+  }
+  35% {
+    background-image: url(../imgs/banner.jpg);
+  }
+  50% {
+    background-image: url(../imgs/banner2.jpg);
+  }
+  85% {
+    background-image: url(../imgs/banner2.jpg);
+  }
+  100% {
+    background-image: url(../imgs/banner.jpg);
+  }
+}
+
+#banner {
+  animation-name: banner;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+/* GRIDs SECUNDARIOS */
+
+.publicacion {
+  display: grid;
+  grid-template-areas:
+    "pubImagen pubImagen"
+    "pubUbicacion pubPrecio"
+    "pubDetalle pubDetalle";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 6fr 1fr 1fr;
+  height: 16rem;
+  transition: transform 1s;
+}
+
+.publicacion:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.publicacion > div {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.pubImagen {
+  grid-area: pubImagen;
+}
+
+.pubUbicacion {
+  grid-area: pubUbicacion;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.pubPrecio {
+  grid-area: pubPrecio;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.pubDetalle {
+  grid-area: pubDetalle;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#pubProm .pubImagen {
+  background-image: url(../imgs/pubProm.jpg);
+}
+
+#pub1 .pubImagen {
+  background-image: url(../imgs/pub1.jpg);
+}
+
+#pub2 .pubImagen {
+  background-image: url(../imgs/pub2.jpg);
+}
+
+#pub3 .pubImagen {
+  background-image: url(../imgs/pub3.jpg);
+}
+
+#pub4 .pubImagen {
+  background-image: url(../imgs/pub4.jpg);
+}
+
+#pub5 .pubImagen {
+  background-image: url(../imgs/pub5.jpg);
+}
+
+#pub6 .pubImagen {
+  background-image: url(../imgs/pub6.jpg);
+}
